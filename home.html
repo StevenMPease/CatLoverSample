@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>We Love Cats</title>
+        
+        <!-- Load the CSS Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Create the Navigation Bar -->
+        <div class="topNav" id="topNavigation">
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Contact Us</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Add the Content -->
+        <div class="content">
+
+            <!-- Create the Title Content -->
+            <div class="homeTitleContent">
+                <div>
+                    <h1>We Love Cats!</h1>
+                </div>
+                <div>
+                    <p>This site is dedicated to all the lovely cats and kittens out there!</p>
+                </div>
+            </div>
+
+            <!-- Create the Body Content -->
+            <div class="homeBodyContent">
+                <div class="homeBodyLeft">
+                    <p>
+                        We love all things cats, and you should too!
+                    </p>
+                </div>
+                <div class="homeBodyRight">
+                    <p>
+                        Be sure to check out the rest of our website for more cute cat pictures!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create the Footer -->
+        <div class="footer">
+            Copyright &copy; 2023 We Love Cats!
+        </div>
+
+        <!-- Create the JavaScript Functions -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topNavigation");
+                if (x.className === "topNav") {
+                    x.className += " responsive";
+                } 
+                else {
+                    x.className = "topNav";
+                }
+            }
+        </script>
+    </body>
+</html>

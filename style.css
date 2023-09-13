@@ -1,0 +1,123 @@
+/* Style the body of the site */
+body {
+    background-color: darkgray;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topNav {    
+    background-color: darksalmon;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;    
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    background-color: #fff;
+    color: darksalmon;
+}
+
+/* Add an active class to highlight the current page */
+.topNav a.active {
+    background-color: #fff;
+    color: darksalmon;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topNav .icon {
+    display: none;
+}
+
+/* Style the home page title content */
+.homeTitleContent {
+    background-image:   linear-gradient(
+                                180deg, 
+                                rgba(0,0,0,0.2) 0%, 
+                                rgba(0,0,0,0.7) 100%
+                        ), 
+                        url("img/jari-hytonen-YCPkW_r_6uA-unsplash.jpg");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: #fff;
+    padding: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the home page body content */
+.homeBodyContent {
+    background-color: tan;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+}
+
+/* Style the home page body items */
+.homeBodyLeft {
+    flex: 50%;
+}
+
+.homeBodyRight {
+    flex: 50%;
+}
+
+/* Style the footer */
+.footer {
+    background-color: darksalmon;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    font-size: 17px; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+    Show the link that contains should open and close the navigation bar (.icon) */
+    .topNav a:not(:first-child) {
+        display: none;
+    }
+    .topNav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* The "responsive" class is added to the navigation bar with JavaScript when the user clicks on the icon. 
+    This class makes the navigation bar look good on small screens (display the links vertically instead of horizontally) */
+    .topNav.responsive {
+        position: relative;
+    }
+    .topNav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topNav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Responsive layout - makes a one column-layout instead of a two-column layout */
+    .homeBodyLeft, .homeBodyRight {
+        flex: 100%;
+    }
+}
