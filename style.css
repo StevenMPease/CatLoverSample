@@ -43,7 +43,21 @@ body {
     display: none;
 }
 
-/* Style the home page title content */
+/* Style the footer */
+.footer {
+    background-color: darksalmon;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    flex: 100%;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Style the Home Page */
 .homeTitle {
     background-image:   linear-gradient(
                                 180deg, 
@@ -60,7 +74,6 @@ body {
     height: auto;
 }
 
-/* Style the home page body content */
 .homeBody {
     display: flex;
     text-align: center;
@@ -68,7 +81,6 @@ body {
     flex-wrap: nowrap;
 }
 
-/* Style the home page body items */
 .volunteer, .weeklyCat {
     flex: 50%;
     padding: 5px;
@@ -100,22 +112,9 @@ body {
 .homePadding {
     display: none;
 }
+/* End of the Home Page */
 
-/* Style the footer */
-.footer {
-    background-color: darksalmon;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-    font-size: 17px;
-    flex: 100%;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-}
-
-/* About Us Styles */
+/* Style the About Us Page */
 .aboutUs {
     background-image:   linear-gradient(
                                 180deg, 
@@ -131,6 +130,7 @@ body {
     max-width: 100%;
     height: auto;
 }
+/* End of the About Us Page */
 
 @media screen and (max-width: 600px) {
     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
