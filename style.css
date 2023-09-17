@@ -1,7 +1,10 @@
 /* Style the body of the site */
 body {
-    background-color: darkgray;
+    background-color: tan;    
+    color: #fff;
     margin: 0;
+    display: flex;
+    flex-direction: column;    
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -40,7 +43,7 @@ body {
 }
 
 /* Style the home page title content */
-.homeTitleContent {
+.homeTitle {
     background-image:   linear-gradient(
                                 180deg, 
                                 rgba(0,0,0,0.2) 0%, 
@@ -50,29 +53,51 @@ body {
     background-size: cover;
     background-position: center center;
     text-align: center;
-    color: #fff;
-    padding: 60px;
+    font-size: x-large;
+    padding: 150px;
     max-width: 100%;
     height: auto;
 }
 
 /* Style the home page body content */
-.homeBodyContent {
-    background-color: tan;
-    color: #fff;
-    text-align: center;
+.homeBody {
     display: flex;
-    flex-wrap: wrap;
-    flex: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 /* Style the home page body items */
-.homeBodyLeft {
+.volunteer, .weeklyCat {
     flex: 50%;
+    padding: 5px;
 }
 
-.homeBodyRight {
-    flex: 50%;
+.weeklyCat {
+    border-left: dashed 2px white;
+    display: flex;
+    align-items: center;
+}
+
+.weeklyCat img {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+}
+
+.weeklyFeature {
+    text-align: left;
+    padding: 5px;
+}
+
+.homeEvent {
+    border-top: dashed 2px white;
+    text-align: center;
+    font-size: large;
+}
+
+.homePadding {
+    display: none;
 }
 
 /* Style the footer */
@@ -81,13 +106,11 @@ body {
     overflow: hidden;
     color: #fff;
     text-align: center;
-    font-size: 17px; 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    font-size: 17px;
+    flex: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
     Show the link that contains should open and close the navigation bar (.icon) */
     .topNav a:not(:first-child) {
@@ -113,11 +136,44 @@ body {
       display: block;
       text-align: left;
     }
+
+    /* Responsive layout for content */
+    .homeBody {
+        flex-wrap: wrap;
+    }
+
+    .homeTitle {
+        padding: 60px;
+        font-size: medium;
+    }
+
+    .volunteer, .weeklyCat {
+        flex: 100%;
+        border-left: none;
+    }
+
+    .weeklyCat {
+        border-top: dashed 2px white;
+    }
 }
 
-@media (max-width: 800px) {
-    /* Responsive layout - makes a one column-layout instead of a two-column layout */
-    .homeBodyLeft, .homeBodyRight {
-        flex: 100%;
+@media (max-width: 999px) and (min-height: 1000px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        align-self: stretch;
+    }
+
+    .content {
+        height: 100vh;
+        align-self: stretch;
+    }
+
+    .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
